@@ -6,8 +6,9 @@ project(lib_template)
 option(BUILD_TESTS "Build tests" OFF)
 
 
+# 
 add_library(${PROJECT_NAME} INTERFACE)
-# C++17
+## C++17
 target_compile_features(${PROJECT_NAME} INTERFACE cxx_std_17)
 ## UTF-8
 target_compile_options(${PROJECT_NAME} INTERFACE
@@ -44,7 +45,7 @@ if(BUILD_TESTS)
     FetchContent_Declare(
         googletest
         GIT_REPOSITORY https://github.com/google/googletest.git
-        GIT_TAG v1.16.x
+        GIT_TAG v1.17.x
         GIT_SHALLOW TRUE
     )
     set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
