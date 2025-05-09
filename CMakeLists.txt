@@ -6,7 +6,7 @@ project(lib_template)
 option(BUILD_TESTS "Build tests" OFF)
 
 
-# 
+# lib_template
 add_library(${PROJECT_NAME} INTERFACE)
 ## C++17
 target_compile_features(${PROJECT_NAME} INTERFACE cxx_std_17)
